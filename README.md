@@ -83,7 +83,7 @@ cp modelos/candidaturas.exemplo.csv candidaturas.csv
 
 Preencha `regras-agente.md`, coloque o PDF do currículo na pasta, faça login nas plataformas no navegador e crie a tarefa agendada. O guia completo está em **[docs/configuracao.md](docs/configuracao.md)**.
 
-Quer só ver o painel? Abra `painel/index.html` e clique em **Ver exemplo**.
+Quer só ver o painel? Abra **[o painel online](https://kaiokkj-dev.github.io/olheiro/painel/)** e clique em **Ver exemplo** (ou abra `painel/index.html` no seu computador). O seu CSV é lido só no navegador, nada é enviado.
 
 ## Privacidade
 
