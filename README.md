@@ -85,6 +85,35 @@ Preencha `regras-agente.md`, coloque o PDF do currículo na pasta, faça login n
 
 Quer só ver o painel? Abra **[o painel online](https://kaiohenrique.dev/olheiro/painel/)** e clique em **Ver exemplo** (ou abra `painel/index.html` no seu computador). O seu CSV é lido só no navegador, nada é enviado.
 
+## Requisitos e alternativas
+
+O agente foi feito para rodar no **[Claude Code](https://claude.com/claude-code)** (app desktop). É ele que fornece as peças que fazem o Olheiro funcionar sem nenhum código de automação:
+
+| Peça | No Claude Code | Sem o Claude, você precisaria de… |
+|---|---|---|
+| Rodar todo dia | Tarefa agendada | Agendador de Tarefas do Windows, `cron` ou GitHub Actions |
+| Entender páginas e decidir | O próprio modelo lendo a página | Chamadas à API de um modelo (Anthropic, OpenAI, Gemini ou um modelo local via Ollama) |
+| Navegar já logado | Extensão Claude in Chrome | [Playwright](https://playwright.dev) ou Selenium com um perfil de navegador logado |
+| Ler e-mails | Conector do Gmail | API do Gmail ou IMAP |
+| Avisar no celular | Notificação push do app | Telegram, [ntfy](https://ntfy.sh) ou e-mail |
+
+**O que funciona com qualquer ferramenta:**
+
+- `modelos/regras-agente.exemplo.md` e `tarefa/olheiro-diario.md` são Markdown puro. A lógica (perfil, nota de 0 a 100, status, o que nunca fazer) serve de prompt para qualquer agente com acesso a navegador.
+- `painel/index.html` só lê o CSV no navegador.
+- `scripts/validar_csv.py` usa só a biblioteca padrão do Python.
+
+**Como adaptar para outro agente:**
+
+1. Use `regras-agente.md` + `tarefa/olheiro-diario.md` como prompt de sistema.
+2. Dê ao agente ferramentas equivalentes às da tabela: abrir página, ler texto, clicar, preencher campo, anexar arquivo, ler e-mail, enviar aviso.
+3. Mantenha a planilha no mesmo formato e rode o validador no fim de cada execução, assim o painel continua funcionando.
+4. Preserve a seção 9 das regras como trava **no código**, não só no prompt: bloqueie campos de senha, CAPTCHA e domínios onde o agente não pode se candidatar (LinkedIn, Indeed).
+
+Atenção: sem o Claude in Chrome, a parte mais trabalhosa e frágil é a navegação. Cada plataforma muda de layout com frequência, e automação com navegador logado pode ir contra os termos de uso de alguns sites.
+
+Contribuições com adaptações para outras ferramentas são bem-vindas, de preferência numa pasta separada (ex.: `adaptacoes/<ferramenta>/`).
+
 ## Privacidade
 
 - Seu perfil, sua planilha e seu currículo ficam **só na sua máquina**: `regras-agente.md`, `candidaturas.csv` e `*.pdf` estão no `.gitignore`.
