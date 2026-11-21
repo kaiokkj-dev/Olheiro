@@ -1,0 +1,8 @@
+data,empresa,vaga,plataforma,link,modelo,local,bolsa,nota,status,motivo,proxima_etapa,prazo,observacoes
+2026-11-19,Acme Software,Estágio em Desenvolvimento Back-end,Gupy,https://example.com/vagas/1001,híbrido,São Paulo - SP (Pinheiros),"R$ 1.800 + VT",82,candidatada,Candidatura enviada com texto citando o projeto de API em Spring Boot,Aguardar análise,,Java e SQL; 6h/dia
+2026-11-19,Banco Fictício,Programa de Estágio Tecnologia 2027,Gupy,https://example.com/vagas/1002,presencial,São Paulo - SP (Av. Paulista),não informada,74,teste,E-mail de 20/11: liberou teste de lógica,Fazer o teste de lógica na plataforma,2026-11-28,Teste é você quem faz; o agente só avisa
+2026-11-19,Startup Exemplo,Software Engineering Intern,LinkedIn,https://example.com/vagas/1003,remoto,Brasil,R$ 2.000,86,aguardando_voce,LinkedIn: candidatura manual,Você se candidatar,,O agente não se candidata no LinkedIn
+2026-11-20,Loja Modelo,Estagiário de TI,InfoJobs,https://example.com/vagas/1004,presencial,Osasco - SP,R$ 1.600,60,precisa_voce,Formulário pergunta algo que não está no perfil,Responder a pergunta e concluir,,Plano B (suporte)
+2026-11-20,Indústria Teste,Estágio em Dados,InfoJobs,https://example.com/vagas/1005,presencial,Campinas - SP,a combinar,45,descartada,"Presencial longe de casa, a 90 km",,,
+2026-11-20,Consultoria Demo,Estágio em QA,Vagas.com,https://example.com/vagas/1006,híbrido,São Paulo - SP,não informada,40,descartada,semestre: pede a partir do 4º semestre,,,
+2026-11-21,Escola Exemplo,Estágio em Tecnologia da Informação,Nube,https://example.com/vagas/1007,presencial,São Paulo - SP,R$ 1.450,,entrevista,Plataforma pede vídeo-entrevista,Gravar o vídeo na plataforma,2026-11-30,

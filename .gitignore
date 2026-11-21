@@ -1,0 +1,15 @@
+# Seus dados pessoais NUNCA vão para o repositório.
+# Copie os arquivos de modelos/ para a raiz e edite as cópias: elas ficam fora do git.
+/regras-agente.md
+/candidaturas.csv
+*.pdf
+*.docx
+
+# Lixo de sistema e editor
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+__pycache__/
+*.pyc
